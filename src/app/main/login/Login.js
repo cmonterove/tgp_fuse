@@ -121,14 +121,14 @@ function Login() {
 
           <div className="flex flex-col items-center justify-center pb-32">
             <div>
-              <span className="font-normal mr-8">No tienes cuenta?</span>
+              <span className="font-normal mr-8">¿No tiene cuenta?</span>
               <Link className="font-normal" to="/register">
-                Register
+                Registrarse
               </Link>
             </div>
-            <Link className="font-normal mt-8" to="/">
+            {/* <Link className="font-normal mt-8" to="/">
               Volver a los clientes
-            </Link>
+            </Link> */}
           </div>
         </Card>
 
@@ -144,8 +144,8 @@ function Login() {
               animate={{ opacity: 1, y: 0, transition: { delay: 0.2 } }}
             >
               <Typography variant="h3" color="inherit" className="font-semibold leading-tight">
-                Bienvenido <br />
-                a <br /> Proyecto X!
+                TGP <br />
+                Visión <br /> Consultores
               </Typography>
             </motion.div>
 

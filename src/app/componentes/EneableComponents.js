@@ -6,6 +6,12 @@ const Clientes = lazy(() => import("./Clientes/LogicaCliente"))
 const Menu = lazy(() => import("./Menu/LogicaMenu"))
 const MetodoPago = lazy(() => import("./metodosPago/LogicaMetodosPago"))
 const Contactos = lazy(() => import("./contacto/LogicaContacto"))
+const Login = lazy(() => import("../main/login/Login"))
+const Home = lazy(() => import("./Home/home"))
+const Form = lazy(() => import("../main/apps/e-commerce/product/Product"));
+// const Products = lazy(() =>
+//   import("../main/apps/e-commerce/products/Products")
+// );
 
 const ComponentsConfig = {
     settings: {
@@ -34,8 +40,13 @@ const ComponentsConfig = {
         {
             path: '/',
             exact: true,
-            component: () => <Clientes />,
+            component: () => <Login />,
         },
+        // {
+        //     path: '/home',
+        //     exact: true,
+        //     component: () => <Home />,
+        // },
         {
             path: '/:nombre',
             exact: true,
@@ -51,6 +62,11 @@ const ComponentsConfig = {
             exact: true,
             component: () => <Contactos />,
         },
+        // {
+        //     path: '/apps/e-commerce/products/new',
+        //     exact: true,
+        //     component: () => <Form />,
+        // },
     ],
 };
 

@@ -1,4 +1,4 @@
-import React, { useEffect } from "react";
+import React, { useEffect } from 'react';
 import './estilosMenu.css'
 
 export default function VistaMenu(props) {

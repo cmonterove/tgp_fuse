@@ -68,7 +68,7 @@ function FirebaseRegisterTab(props) {
               {...field}
               className="mb-16"
               type="text"
-              label="Display name"
+              label="Nombre completo"
               error={!!errors.displayName}
               helperText={errors?.displayName?.message}
               InputProps={{
@@ -96,7 +96,7 @@ function FirebaseRegisterTab(props) {
               type="text"
               error={!!errors.email}
               helperText={errors?.email?.message}
-              label="Email"
+              label="Correo electrónico"
               InputProps={{
                 endAdornment: (
                   <InputAdornment position="end">
@@ -120,7 +120,7 @@ function FirebaseRegisterTab(props) {
               {...field}
               className="mb-16"
               type="password"
-              label="Password"
+              label="Contraseña"
               error={!!errors.password}
               helperText={errors?.password?.message}
               InputProps={{
@@ -146,7 +146,7 @@ function FirebaseRegisterTab(props) {
               {...field}
               className="mb-16"
               type="password"
-              label="Confirm Password"
+              label="Confirmar contraseña"
               error={!!errors.passwordConfirm}
               helperText={errors?.passwordConfirm?.message}
               InputProps={{
@@ -173,7 +173,7 @@ function FirebaseRegisterTab(props) {
           disabled={_.isEmpty(dirtyFields) || !isValid}
           value="legacy"
         >
-          Register
+          Registrarse
         </Button>
       </form>
     </div>

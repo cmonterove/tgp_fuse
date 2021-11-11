@@ -65,7 +65,7 @@ function FirebaseLoginTab(props) {
               {...field}
               className="mb-16"
               type="text"
-              label="Email"
+              label="Correo electrónico"
               error={!!errors.email}
               helperText={errors?.email?.message}
               InputProps={{
@@ -91,7 +91,7 @@ function FirebaseLoginTab(props) {
               {...field}
               className="mb-16"
               type="password"
-              label="Password"
+              label="Contraseña"
               error={!!errors.password}
               helperText={errors?.password?.message}
               InputProps={{
@@ -122,7 +122,7 @@ function FirebaseLoginTab(props) {
           disabled={_.isEmpty(dirtyFields) || !isValid}
           value="firebase"
         >
-          Log in with Firebase
+          Iniciar sesión
         </Button>
       </form>
     </div>

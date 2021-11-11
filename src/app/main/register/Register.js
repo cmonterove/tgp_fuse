@@ -123,9 +123,9 @@ function Register() {
                 Login
               </Link>
             </div>
-            <Link className="font-normal mt-8" to="/">
+            {/* <Link className="font-normal mt-8" to="/">
               Volver a los clientes
-            </Link>
+            </Link> */}
           </div>
         </Card>
 
@@ -141,8 +141,8 @@ function Register() {
               animate={{ opacity: 1, y: 0, transition: { delay: 0.2 } }}
             >
               <Typography variant="h3" color="inherit" className="font-semibold leading-tight">
-                Bienvenido <br />
-                a <br /> Proyecto x!
+                TGP <br />
+                Visión <br /> Consultores
               </Typography>
             </motion.div>
 
@@ -157,9 +157,9 @@ function Register() {
               </Typography>
             </motion.div>
           </div>
-          <Link className="font-normal mt-8" to="/">
+          {/* <Link className="font-normal mt-8" to="/">
               Back to Dashboard
-            </Link>
+            </Link> */}
         </div>
       </motion.div>
     </div>

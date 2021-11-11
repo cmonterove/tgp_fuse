@@ -7,16 +7,16 @@ const ScrumboardAppConfig = {
   },
   routes: [
     {
-      path: '/apps/scrumboard/boards/:boardId/:boardUri?',
-      component: lazy(() => import('./board/Board')),
+      path: '/Menu/Redacta',
+      component: () => import("../../pages/profile/ProfilePage"),
     },
     {
-      path: '/apps/scrumboard/boards',
+      path: '/home',
       component: lazy(() => import('./boards/Boards')),
     },
     {
       path: '/apps/scrumboard',
-      component: () => <Redirect to="/apps/scrumboard/boards" />,
+      component: () => <Redirect to="/home" />,
     },
   ],
 };

@@ -40,8 +40,7 @@ export const submitLoginWithFireBase =
             email,
           })
         );
-        console.log("aqui")
-        window.location = `/#/manage/Products`
+        window.location = `/#/Main/Home`
         return dispatch(loginSuccess());
       })
       .catch((error) => {

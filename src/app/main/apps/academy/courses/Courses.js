@@ -24,6 +24,8 @@ import reducer from '../store';
 import { getCategories, selectCategories } from '../store/categoriesSlice';
 import { getCourses, selectCourses } from '../store/coursesSlice';
 
+import { openNewContactDialog } from '../../contacts/store/contactsSlice';
+
 const useStyles = makeStyles((theme) => ({
   header: {
     background: `linear-gradient(to right, ${theme.palette.primary.dark} 0%, ${theme.palette.primary.main} 100%)`,
@@ -87,11 +89,11 @@ function Courses(props) {
   function buttonStatus(course) {
     switch (course.activeStep) {
       case course.totalSteps:
-        return 'Completed';
+        return 'Seleccionar';
       case 0:
-        return 'Start';
+        return 'Seleccionar';
       default:
-        return 'Continue';
+        return 'Seleccionar';
     }
   }
 
@@ -106,7 +108,7 @@ function Courses(props) {
         <div className="flex flex-col max-w-2xl mx-auto w-full p-24 sm:p-32">
           <motion.div initial={{ opacity: 0 }} animate={{ opacity: 1, transition: { delay: 0 } }}>
             <Typography color="inherit" className="text-24 sm:text-44 font-bold tracking-tight">
-              Welcome to Academy
+              Redacta
             </Typography>
           </motion.div>
           <motion.div initial={{ opacity: 0 }} animate={{ opacity: 1, transition: { delay: 0.3 } }}>
@@ -114,10 +116,7 @@ function Courses(props) {
               color="inherit"
               className="text-12 sm:text-14 mt-8 sm:mt-16 opacity-75 leading-tight sm:leading-loose"
             >
-              Our courses will step you through the process of building a small application, or
-              adding a new feature to an existing application. Our courses will step you through the
-              process of building a small application, or adding a new feature to an existing
-              application.
+              Selecciona el tipo de documento que deseas que redactemos por ti
             </Typography>
           </motion.div>
         </div>
@@ -128,7 +127,7 @@ function Courses(props) {
         <div className="flex flex-col flex-shrink-0 sm:flex-row items-center justify-between py-24">
           <TextField
             label="Search for a course"
-            placeholder="Enter a keyword..."
+            placeholder="Ingrese una palabra clave ..."
             className="flex w-full sm:w-320 mb-16 sm:mb-0 mx-16"
             value={searchText}
             inputProps={{
@@ -141,7 +140,7 @@ function Courses(props) {
             }}
           />
           <FormControl className="flex w-full sm:w-320 mx-16" variant="outlined">
-            <InputLabel htmlFor="category-label-placeholder"> Category </InputLabel>
+            <InputLabel htmlFor="category-label-placeholder"> Categorias </InputLabel>
             <Select
               value={selectedCategory}
               onChange={handleSelectedCategory}
@@ -154,7 +153,7 @@ function Courses(props) {
               }
             >
               <MenuItem value="all">
-                <em> All </em>
+                <em> Todas </em>
               </MenuItem>
               {categories.map((category) => (
                 <MenuItem value={category.value} key={category.id}>
@@ -212,7 +211,7 @@ function Courses(props) {
                           <Typography className="font-medium truncate" color="inherit">
                             {category.label}
                           </Typography>
-                          <div className="flex items-center justify-center opacity-75">
+                          {/* <div className="flex items-center justify-center opacity-75">
                             <Icon className="text-20 mx-8" color="inherit">
                               access_time
                             </Icon>
@@ -220,22 +219,32 @@ function Courses(props) {
                               {course.length}
                               min
                             </div>
-                          </div>
+                          </div> */}
                         </div>
                         <CardContent className="flex flex-col flex-auto items-center justify-center">
                           <Typography className="text-center text-16 font-medium">
                             {course.title}
                           </Typography>
-                          <Typography
+                          {/* <Typography
                             className="text-center text-13 mt-8 font-normal"
                             color="textSecondary"
                           >
                             {course.updated}
-                          </Typography>
+                          </Typography> */}
                         </CardContent>
                         <CardActions className="justify-center pb-24">
+                        {/* <Button
+                      component={Link}
+                      to="/apps/e-commerce/products/new"
+                      className="whitespace-nowrap"
+                      variant="contained"
+                      color="secondary"
+                    >
+                      <span className="hidden sm:flex">Add New Product</span>
+                      <span className="flex sm:hidden">New</span>
+                    </Button> */}
                           <Button
-                            to={`/apps/academy/courses/${course.id}/${course.slug}`}
+                            to="/apps/e-commerce/products/new"
                             component={Link}
                             className="justify-start px-32"
                             color="primary"
@@ -244,12 +253,12 @@ function Courses(props) {
                             {buttonStatus(course)}
                           </Button>
                         </CardActions>
-                        <LinearProgress
+                        {/* <LinearProgress
                           className="w-full"
                           variant="determinate"
                           value={(course.activeStep * 100) / course.totalSteps}
                           color="secondary"
-                        />
+                        /> */}
                       </Card>
                     </motion.div>
                   );

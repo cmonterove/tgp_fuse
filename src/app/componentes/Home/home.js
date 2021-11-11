@@ -8,8 +8,8 @@ import { motion } from 'framer-motion';
 import { useEffect } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
 import { Link } from 'react-router-dom';
-import reducer from '../store';
-import { selectBoards, newBoard, getBoards, resetBoards } from '../store/boardsSlice';
+// import reducer from '../store';
+// import { selectBoards, newBoard, getBoards, resetBoards } from '../store/boardsSlice';
 
 const useStyles = makeStyles((theme) => ({
   root: {},
@@ -22,23 +22,25 @@ const useStyles = makeStyles((theme) => ({
   newBoard: {},
 }));
 
-function Home(props) {
+export default function Boards(props) {
   const dispatch = useDispatch();
   // const boards = useSelector(selectBoards)
   const boards = [
-    {id: '32gfhaf0', name: 'REVISA', uri: '/Menu/Redacta'},
-    {id: '32gfhaf1', name: 'REDACTA', uri: '/Menu/Redacta'},
-    {id: '32gfhaf2', name: 'ASESORÍA', uri: '/Menu/Redacta'}
+    {id: '32gfhaf0', name: 'REVISA', uri: 'option-revisa'},
+    {id: '32gfhaf1', name: 'REDACTA', uri: 'option-redacta'},
+    {id: '32gfhaf2', name: 'ASESORÍA', uri: 'option-asesoria'}
   ]
+  
+  console.log(boards)
 
   const classes = useStyles(props);
 
-  useEffect(() => {
-    dispatch(getBoards());
-    return () => {
-      dispatch(resetBoards());
-    };
-  }, [dispatch]);
+  // useEffect(() => {
+  //   dispatch(getBoards());
+  //   return () => {
+  //     dispatch(resetBoards());
+  //   };
+  // }, [dispatch]);
 
   const container = {
     show: {
@@ -61,7 +63,7 @@ function Home(props) {
             className="mt-44 sm:mt-88 sm:py-24 text-32 sm:text-40 font-bold"
             color="inherit"
           >
-            ¿Qué podemos hacer por ti?
+            Scrumboard App
           </Typography>
         </motion.div>
 
@@ -74,7 +76,7 @@ function Home(props) {
           {boards.map((board) => (
             <motion.div variants={item} className="w-224 h-224 p-16" key={board.id}>
               <Paper
-                to={`${board.uri}`}
+                to={`/apps/scrumboard/boards/${board.id}/${board.uri}`}
                 className={clsx(
                   classes.board,
                   'flex flex-col items-center justify-center w-full h-full rounded-16 py-24 shadow hover:shadow-lg'
@@ -117,6 +119,4 @@ function Home(props) {
   );
 }
 
-export default withReducer('scrumboardApp', reducer)(Home);
-
-// export default Home;
+// export default withReducer('scrumboardApp', reducer)(Boards);

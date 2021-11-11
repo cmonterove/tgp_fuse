@@ -8,7 +8,7 @@ const ProfilePageConfig = {
   },
   routes: [
     {
-      path: '/pages/profile',
+      path: '/pages/perfil',
       component: lazy(() => import('./ProfilePage')),
     },
   ],

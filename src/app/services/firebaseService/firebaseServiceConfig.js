@@ -1,21 +1,21 @@
 const prodConfig = {
-  apiKey: "AIzaSyCdjYbgjkMKx_jSUoUAlyUxjCm_PsOFInw",
-  authDomain: "proyecto-x-18123.firebaseapp.com",
-  projectId: "proyecto-x-18123",
-  storageBucket: "proyecto-x-18123.appspot.com",
-  messagingSenderId: "292216059941",
-  appId: "1:292216059941:web:a5ee01ffade8cf7f4a67cc",
-  measurementId: "G-E86JBSK6V8"
+  apiKey: "AIzaSyA_pdzlVCMpDuppHRRNntSPrx7afWIdan8",
+  authDomain: "tpgapp-b5f15.firebaseapp.com",
+  projectId: "tpgapp-b5f15",
+  storageBucket: "tpgapp-b5f15.appspot.com",
+  messagingSenderId: "491994965627",
+  appId: "1:491994965627:web:d81455d1efa41bbab164de",
+  measurementId: "G-VY6B5MW1WQ"
 };
 
 const devConfig = {
-  apiKey: "AIzaSyCdjYbgjkMKx_jSUoUAlyUxjCm_PsOFInw",
-  authDomain: "proyecto-x-18123.firebaseapp.com",
-  projectId: "proyecto-x-18123",
-  storageBucket: "proyecto-x-18123.appspot.com",
-  messagingSenderId: "292216059941",
-  appId: "1:292216059941:web:a5ee01ffade8cf7f4a67cc",
-  measurementId: "G-E86JBSK6V8"
+  apiKey: "AIzaSyA_pdzlVCMpDuppHRRNntSPrx7afWIdan8",
+  authDomain: "tpgapp-b5f15.firebaseapp.com",
+  projectId: "tpgapp-b5f15",
+  storageBucket: "tpgapp-b5f15.appspot.com",
+  messagingSenderId: "491994965627",
+  appId: "1:491994965627:web:d81455d1efa41bbab164de",
+  measurementId: "G-VY6B5MW1WQ"
 };
 
 const config = process.env.NODE_ENV === 'production' ? prodConfig : devConfig;
